@@ -22,7 +22,7 @@ The sidebar lists all of your user messages (questions) in the current chat and 
 1. Open Chrome and go to `chrome://extensions/`.
 2. Toggle **Developer mode** on (top-right).
 3. Click **"Load unpacked"**.
-4. Select the `jocker` folder (the folder that contains `manifest.json`).
+4. Select the `chat_track` folder (the folder that contains `manifest.json`).
 5. Ensure the extension is enabled.
 
 Then open ChatGPT, Claude, or Gemini in a tab. You should see a thin handle on the right side; hover it to expand the sidebar.
