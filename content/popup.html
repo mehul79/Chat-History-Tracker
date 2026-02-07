@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Bookmarks</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            width: 400px;
+            padding: 12px;
+        }
+        .chats {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .chat-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: 1px solid #e0e0e0;
+        }
+        .chat-item:hover {
+            background: #a9a9a9;
+        }
+        .chat-text {
+            flex: 1;
+            font-size: 13px;
+            color: #000000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .chat-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .chat-item:hover .chat-actions {
+            opacity: 1;
+        }
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-btn img {
+            width: 18px;
+            height: 18px;
+        }
+        .empty-state {
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+            padding: 20px 10px;
+        }
+        .save-btn {
+            width: 100%;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            transition: background 0.2s;
+        }
+        .save-btn:hover {
+            background: #555;
+        }
+        .save-btn:active {
+            transform: scale(0.98);
+        }
+        .save-status {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            padding: 6px;
+            margin-bottom: 8px;
+            border-radius: 4px;
+            display: none;
+        }
+        .save-status.success {
+            background: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .save-status.error {
+            background: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="save-status" id="saveStatus"></div>
+    <button class="save-btn" id="saveBtn">⭐ Save Current Chat</button>
+    <div class="chats" id="chatsList"></div>
+    <div class="empty-state" id="emptyState">No bookmarks yet</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
