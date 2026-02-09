@@ -3,6 +3,9 @@
 This Chrome extension injects a small, hoverable sidebar on the right side of ChatGPT, Claude, and Gemini conversations.  
 The sidebar lists all of your user messages (questions) in the current chat and lets you click to jump/scroll to that turn.
 
+### Demo
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1fE7KxKG_8w?si=07tvFYZzKWOdMfKZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Supported sites
 
 - ChatGPT: `https://chat.openai.com/*`, `https://chatgpt.com/*`
